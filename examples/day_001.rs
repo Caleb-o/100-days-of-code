@@ -1,9 +1,22 @@
+/*
+    100 DAYS OF CODE: Day 001
+    Webserver - Rust book
+
+    The first day is coming in with something more than a few functions and language testing.
+    I decided to follow the Rust book earlier and thought it would be nice to work through
+    the last section as my first day of code. I still have a long way to go with Rust and
+    would love to do more with this little app.
+
+    I was able to understand *most* of the project code and felt confident writing the code.
+*/
+
 use std::{
     fs,
-    thread,
     io::prelude::*,
     net::{TcpListener, TcpStream},
 };
+use one_hundred_days_of_code::webclient::ThreadPool;
+
 
 fn handle_connection(mut stream: TcpStream)
 {
@@ -37,13 +50,16 @@ fn handle_connection(mut stream: TcpStream)
 fn main()
 {
     let listener = TcpListener::bind("127.0.0.1:8080").unwrap();
+    let pool = ThreadPool::new(4);
 
     for stream in listener.incoming()
     {
         let stream = stream.unwrap();
 
-        thread::spawn(|| {
+        pool.execute(|| {
             handle_connection(stream);
         });
     }
+
+    println!("Shutting down");
 }

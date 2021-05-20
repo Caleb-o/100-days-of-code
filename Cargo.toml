@@ -1,5 +1,5 @@
 [package]
-name = "OneHundredDaysOfCode"
+name = "one_hundred_days_of_code"
 version = "0.1.0"
 authors = ["Caleb <CalebOttoGameDev@Gmail.com>"]
 edition = "2018"
