@@ -10,4 +10,9 @@ The official website is [here](https://www.100daysofcode.com/) for further infor
 
 ## Progress 
 - [x] Day 1 - Simple multithreaded web server (From the Rust book)
-- [ ] Day 2 - ?
+- [x] Day 2 - Covered Rust threading
+- [ ] Day 3 - ?
+
+## Milestones
+- [ ] Day 10 - Simple argument parser
+- [ ] Day 15 - ?
