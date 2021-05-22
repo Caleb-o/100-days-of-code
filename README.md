@@ -11,7 +11,8 @@ The official website is [here](https://www.100daysofcode.com/) for further infor
 ## Progress 
 - [x] Day 1 - Simple multithreaded web server (From the Rust book)
 - [x] Day 2 - Covered Rust threading
-- [ ] Day 3 - ?
+- [x] Day 3 - Word / Symbol occurance counter
+- [ ] Day 4 - ?
 
 ## Milestones
 - [ ] Day 10 - Simple argument parser
