@@ -12,7 +12,9 @@ The official website is [here](https://www.100daysofcode.com/) to get for furthe
 - [x] Day 1 - Simple multithreaded web server (From the Rust book)
 - [x] Day 2 - Rust threading
 - [x] Day 3 - Word / Symbol occurance counter
-- [ ] Day 4 - More over str and String
+- [x] Day 4 - More over str and String
+- [x] Day 5 - Simple BrainF*ck Interpreter
+- [ ] Day 6 - ?
 
 ## Milestones
 *Note: Milestones are based on rough estimates, some may be completed earlier or later depending on how days progress. *
