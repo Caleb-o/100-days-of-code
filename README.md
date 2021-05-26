@@ -14,9 +14,9 @@ The official website is [here](https://www.100daysofcode.com/) to get for furthe
 - [x] Day 3 - Word / Symbol occurance counter
 - [x] Day 4 - More over str and String
 - [x] Day 5 - Simple BrainF*ck Interpreter
-- [ ] Day 6 - ?
+- [x] Day 6 - CLI Todo list program
+- [ ] Day 7 - ?
 
 ## Milestones
 *Note: Milestones are based on rough estimates, some may be completed earlier or later depending on how days progress. *
-- Day 10 : Simple argument parser
-- Day 15 : Terminal Timer with std lib
+- Day 10 : Terminal Timer with std lib
