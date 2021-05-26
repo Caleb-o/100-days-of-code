@@ -18,5 +18,5 @@ The official website is [here](https://www.100daysofcode.com/) to get for furthe
 - [ ] Day 7 - ?
 
 ## Milestones
-*Note: Milestones are based on rough estimates, some may be completed earlier or later depending on how days progress. *
+*Note: Milestones are based on rough estimates, some may be completed earlier or later depending on how days progress.*
 - Day 10 : Terminal Timer with std lib
