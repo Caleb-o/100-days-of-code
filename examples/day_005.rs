@@ -5,6 +5,10 @@
 
 use std::{env, fs, io};
 
+
+const CELLS: usize = 30_000;
+
+
 fn read_code(file_name: String) -> io::Result<String>
 {
     fs::read_to_string(file_name)
@@ -16,7 +20,7 @@ fn execute(code: String) -> Result<(), String>
     let mut ip: usize = 0;
     let size: usize = code.len();
 
-    let mut memory = [0u8; 30_000];
+    let mut memory = [0u8; CELLS];
     let mut mp: usize = 0;
 
     loop {
@@ -26,15 +30,15 @@ fn execute(code: String) -> Result<(), String>
             b'-' => memory[mp] -= 1,
             b'<' => {
                 mp -= 1;
-                if mp < 0
+                if mp >= CELLS
                 {
-                    mp = 29_999;
+                    mp = CELLS - 1;
                 }
             }
             b'>' => {
                 mp += 1;
 
-                if mp == 30_000
+                if mp == CELLS
                 {
                     mp = 0;
                 }
