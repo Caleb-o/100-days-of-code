@@ -15,7 +15,8 @@ The official website is [here](https://www.100daysofcode.com/) to get for furthe
 - [x] Day 4 - More over str and String
 - [x] Day 5 - Simple BrainF*ck Interpreter
 - [x] Day 6 - CLI Todo list program
-- [ ] Day 7 - ?
+- [x] Day 7 - Writing Rust book chapters 3-3.2 (In my words)
+- [ ] Day 8 - ?
 
 ## Milestones
 *Note: Milestones are based on rough estimates, some may be completed earlier or later depending on how days progress.*
