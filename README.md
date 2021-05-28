@@ -16,7 +16,8 @@ The official website is [here](https://www.100daysofcode.com/) to get for furthe
 - [x] Day 5 - Simple BrainF*ck Interpreter
 - [x] Day 6 - CLI Todo list program
 - [x] Day 7 - Chapters 3-3.2 [Written]
-- [ ] Day 8 - ?
+- [x] Day 8 - Ownership [Written / Code]
+- [ ] Day 9 - ?
 
 ## Milestones
 *Note: Milestones are based on rough estimates, some may be completed earlier or later depending on how days progress.*
