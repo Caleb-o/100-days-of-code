@@ -17,7 +17,8 @@ The official website is [here](https://www.100daysofcode.com/) to get for furthe
 - [x] Day 6 - CLI Todo list program
 - [x] Day 7 - Chapters 3-3.2 [Written]
 - [x] Day 8 - Ownership [Written / Code]
-- [ ] Day 9 - ?
+- [x] Day 9 - Iterators, Some, Result, Option and Closures
+- [ ] Day 10 - Terminal Timer
 
 ## Milestones
 *Note: Milestones are based on rough estimates, some may be completed earlier or later depending on how days progress.*
