@@ -18,10 +18,9 @@ The official website is [here](https://www.100daysofcode.com/) to get for furthe
 - [x] Day 7 - Chapters 3-3.2 [Written]
 - [x] Day 8 - Ownership [Written / Code]
 - [x] Day 9 - Iterators, Some, Result, Option and Closures
-- [ ] Day 10 - Terminal Timer
-- [ ] Day 11-? - SDL2 Game
+- [x] Day 10-? - SDL2 Game
+- [ ] Day 11 - SDl2 Game ?
 
 ## Milestones
 *Note: Milestones are based on rough estimates, some may be completed earlier or later depending on how days progress.*
-- Day 10 : Terminal Timer with std lib
-- Day 11-? : SDL2 Game
+- Day 10-? : SDL2 Game
