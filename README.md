@@ -19,7 +19,10 @@ The official website is [here](https://www.100daysofcode.com/) to get for furthe
 - [x] Day 8 - Ownership [Written / Code]
 - [x] Day 9 - Iterators, Some, Result, Option and Closures
 - [x] Day 10-? - SDL2 Game
-- [ ] Day 11 - SDl2 Game ?
+- [x] Day 11 - Python image packer tool
+- [x] Day 12 - Python image packer tool refinement
+- [x] Day 13 - SDL2 game continuation
+- [ ] Day 14 - ?
 
 ## Milestones
 *Note: Milestones are based on rough estimates, some may be completed earlier or later depending on how days progress.*
