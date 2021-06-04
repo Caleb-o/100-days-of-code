@@ -22,8 +22,10 @@ The official website is [here](https://www.100daysofcode.com/) to get for furthe
 - [x] Day 11 - Python image packer tool
 - [x] Day 12 - Python image packer tool refinement
 - [x] Day 13 - SDL2 game player movement
-- [ ] Day 14 - ?
+- [x] Day 14 - SDL2 game: Smooth movement, Animation, ECS (Does not run)
+- [ ] Day 15 - ?
 
 ## Milestones
 *Note: Milestones are based on rough estimates, some may be completed earlier or later depending on how days progress.*
 - Day 10-? : SDL2 Game
+- Day 25 : (small) SDL2 game of my own
