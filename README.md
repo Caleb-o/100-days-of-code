@@ -8,7 +8,7 @@ Participation repo for 100 Days of Code. I want to try and learn more about Rust
 
 The official website is [here](https://www.100daysofcode.com/) to get for further information.
 
-## Progress 
+## Progress
 - [x] Day 1 - Simple multithreaded web server (From the Rust book)
 - [x] Day 2 - Rust threading
 - [x] Day 3 - Word / Symbol occurance counter
@@ -21,7 +21,7 @@ The official website is [here](https://www.100daysofcode.com/) to get for furthe
 - [x] Day 10-? - SDL2 Game
 - [x] Day 11 - Python image packer tool
 - [x] Day 12 - Python image packer tool refinement
-- [x] Day 13 - SDL2 game continuation
+- [x] Day 13 - SDL2 game player movement
 - [ ] Day 14 - ?
 
 ## Milestones
