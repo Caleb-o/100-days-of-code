@@ -31,4 +31,5 @@ The official website is [here](https://www.100daysofcode.com/) to get for furthe
 - [x] Day 15 - SDL2 further reading
 - [x] Day 16 - Started using Godot
 - [x] Day 17 - Further following Godot tutorial docs
-- [ ] Day 18 - ?
+- [x] Day 18 - Following Crafting Interpreters for AST interpreter
+- [ ] Day 19 - ?
