@@ -9,6 +9,7 @@
 use std::{
     fs,
     env,
+    io::{self, Write},
 };
 use one_hundred_days_of_code::ast::{
     tokens::{Token},
@@ -18,7 +19,7 @@ use one_hundred_days_of_code::ast::{
 // Execution of code
 fn run(source: String) -> Result<(), String>
 {
-    let mut scanner = Scanner::new(source);
+    let mut scanner = Scanner::with_source(source);
     let tokens: &Vec<Token> = scanner.scan_tokens().unwrap();
 
     for tok in tokens
@@ -43,8 +44,23 @@ fn run_file(file_path: String) -> Result<(), String>
 // Run as a prompt
 fn run_prompt() -> Result<(), String>
 {
-    // TODO
-    Ok(())
+    println!("=== Rusty Lox Repl ===");
+
+    let mut code = String::new();
+
+    loop
+    {
+        print!("> ");
+        
+        io::stdout().flush().unwrap();
+        io::stdin().read_line(&mut code).unwrap();
+
+        match run(code.clone())
+        {
+            Ok(_) => {},
+            Err(e) => return Err(format!("Error: {}", e)),
+        }
+    }
 }
 
 

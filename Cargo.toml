@@ -13,7 +13,7 @@ clap = "2.33.0"
 specs = "0.14"
 specs-derive = "0.4"
 
-[dependencies.sdl2]
-version = "0.32.1"
-default-features = false
-features = ["image"]
+#[dependencies.sdl2]
+#version = "0.32.1"
+#default-features = false
+#features = ["image"]

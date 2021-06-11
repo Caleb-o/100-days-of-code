@@ -5,7 +5,7 @@
     Today I started with setting up SDL2 and Rust.
     I found a nice tutorial that goes over a simple game with SDL2.
 */
-
+/* 
 use sdl2::{
     pixels::Color,
     event::Event,
@@ -75,3 +75,5 @@ fn main() -> Result<(), String>
 
     Ok(())
 }
+*/
+fn main() {}

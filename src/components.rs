@@ -1,4 +1,4 @@
-use specs::prelude::*;
+/*use specs::prelude::*;
 use specs_derive::Component;
 use sdl2::rect::{Point, Rect};
 
@@ -42,3 +42,4 @@ pub struct MovementAnimation
     pub left_frames: Vec<Sprite>,
     pub right_frames: Vec<Sprite>,
 }
+*/

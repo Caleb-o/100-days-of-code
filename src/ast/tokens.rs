@@ -1,4 +1,4 @@
-#[derive(Debug)]
+#[derive(Debug, Copy, Clone)]
 pub enum TokenType
 {
     // Single-character tokens.
@@ -45,6 +45,12 @@ impl Token
 
     pub fn to_string(&self) -> String
     {
-        format!("{:?} {} {}", self.type_of, self.lexeme, self.literal)
+        let mut literal = format!("{:?} {}", self.type_of, self.lexeme);
+
+        if self.literal.len() > 0
+        {
+            literal.push_str(format!(" - {}", self.literal).as_str());
+        }
+        literal
     }
 }

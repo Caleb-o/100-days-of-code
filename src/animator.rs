@@ -1,4 +1,4 @@
-use specs::prelude::*;
+/*use specs::prelude::*;
 use crate::components::*;
 
 pub struct Animator;
@@ -36,3 +36,4 @@ impl<'a> System<'a> for Animator
         }
     }
 }
+*/
