@@ -8,6 +8,11 @@ Participation repo for 100 Days of Code. I want to try and learn more about Rust
 
 The official website is [here](https://www.100daysofcode.com/) to get for further information.
 
+## Milestones
+*Note: Milestones are based on rough estimates, some may be completed earlier or later depending on how days progress.*
+- Day 10-? : SDL2 Game
+- Day 25 : (small) SDL2 game of my own
+
 ## Progress
 - [x] Day 1 - Simple multithreaded web server (From the Rust book)
 - [x] Day 2 - Rust threading
@@ -23,9 +28,7 @@ The official website is [here](https://www.100daysofcode.com/) to get for furthe
 - [x] Day 12 - Python image packer tool refinement
 - [x] Day 13 - SDL2 game player movement
 - [x] Day 14 - SDL2 game: Smooth movement, Animation, ECS (Does not run)
-- [ ] Day 15 - ?
-
-## Milestones
-*Note: Milestones are based on rough estimates, some may be completed earlier or later depending on how days progress.*
-- Day 10-? : SDL2 Game
-- Day 25 : (small) SDL2 game of my own
+- [x] Day 15 - SDL2 further reading
+- [x] Day 16 - Started using Godot
+- [x] Day 17 - Further following Godot tutorial docs
+- [ ] Day 18 - ?
