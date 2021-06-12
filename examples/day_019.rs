@@ -14,7 +14,7 @@ use std::{
 // Read a file and run
 fn run_file(file_path: String) -> Result<(), String>
 {
-    let vm = VM::new();
+    let mut vm = VM::new();
     vm.init();
 
     use InterpretResult::*;
@@ -42,7 +42,7 @@ fn run_prompt() -> Result<(), String>
     println!("=== Rusty Lox Repl ===");
 
     let mut code = String::new();
-    let vm = VM::new();
+    let mut vm = VM::new();
     vm.init();
 
     use InterpretResult::*;
@@ -54,16 +54,23 @@ fn run_prompt() -> Result<(), String>
         io::stdout().flush().unwrap();
         io::stdin().read_line(&mut code).unwrap();
 
-        if code.len() == 0 | 1
+        // Cleanup string
+        code = code.trim_end().to_string();
+        
+        if code.len() < 2
         {
             continue;
         }
-
+        
+        code.push('\0');
+        
         match vm.interpret(code.clone())
         {
             Okay => {},
             CompilerError | RuntimeError => return Err("Error occured".to_string()),
         }
+
+        code.clear();
     }
 }
 
@@ -71,10 +78,10 @@ fn main()
 {
     let args: Vec<_> = env::args().collect();
 
-    let status = match args.len()
+    let _ = match args.len()
     {
         1 => run_prompt(),
-        2 => run_file(args[1]),
+        2 => run_file(args[1].clone()),
         _ => {
             panic!("Usage: rlox [path]");
         }

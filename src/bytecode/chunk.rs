@@ -54,7 +54,7 @@ impl From<OpCode> for u8
 pub struct Chunk
 {
     pub(super) code: Vec<u8>,
-    pub(super) lines: Vec<u32>,
+    pub(super) lines: Vec<usize>,
     pub(super) constants: ValueArray,
 }
 
@@ -70,13 +70,13 @@ impl Chunk
         }
     }
 
-    pub fn write(&mut self, byte: OpCode, line: u32)
+    pub fn write(&mut self, byte: OpCode, line: usize)
     {
         self.code.push(byte as u8);
         self.lines.push(line);
     }
 
-    pub fn write_constant(&mut self, byte: usize, line: u32)
+    pub fn write_constant(&mut self, byte: usize, line: usize)
     {
         self.code.push(byte as u8);
         self.lines.push(line);

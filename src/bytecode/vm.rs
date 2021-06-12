@@ -1,5 +1,8 @@
+#![allow(dead_code)]
+
 use super::{
     debug,
+    compiler::Parser,
     chunk::{Chunk, OpCode},
     value::{self, Value},
 };
@@ -58,11 +61,24 @@ impl VM
         self.stack.reserve(STACK_MAX);
     }
 
-    pub fn interpret(&mut self, chunk: Chunk) -> InterpretResult
+    pub fn interpret(&mut self, source: String) -> InterpretResult
     {
+        let mut parser = Parser::new();
+        let mut chunk = Chunk::new();
+
+        if !parser.compile(source, chunk)
+        {
+            chunk.free();
+            return InterpretResult::CompilerError;
+        }
+
+        self.init();
         self.chunk = chunk;
+
+        let result = self.run();
         
-        self.run()
+        self.free();
+        result
     }
 
     fn push(&mut self, value: Value)
@@ -153,7 +169,7 @@ impl VM
                         self.push(-val);
                     }
                 }
-                
+
                 Add => self.binary_op(BinaryOp::ADD),
                 Subtract => self.binary_op(BinaryOp::SUB),
                 Multiply => self.binary_op(BinaryOp::MUL),
