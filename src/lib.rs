@@ -1,3 +1,5 @@
+#![feature(fn_traits)]
+
 pub mod webclient;
 pub mod components;
 pub mod physics;

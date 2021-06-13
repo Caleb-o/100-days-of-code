@@ -2,6 +2,7 @@
 
 use super::{
     debug,
+    scanner::Scanner,
     compiler::Parser,
     chunk::{Chunk, OpCode},
     value::{self, Value},
@@ -64,16 +65,15 @@ impl VM
     pub fn interpret(&mut self, source: String) -> InterpretResult
     {
         let mut parser = Parser::new();
-        let mut chunk = Chunk::new();
+        let chunk = Chunk::new();
 
         if !parser.compile(source, chunk)
         {
-            chunk.free();
             return InterpretResult::CompilerError;
         }
 
         self.init();
-        self.chunk = chunk;
+        //self.chunk = chunk;
 
         let result = self.run();
         

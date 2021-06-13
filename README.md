@@ -33,4 +33,5 @@ The official website is [here](https://www.100daysofcode.com/) to get for furthe
 - [x] Day 17 - Further following Godot tutorial docs
 - [x] Day 18 - Following Crafting Interpreters for AST interpreter
 - [x] Day 19 - Following Crafting Interpreters for Bytecode interpreter
-- [ ] Day 20 - ?
+- [x] Day 20 - Further development on BC interpreter
+- [ ] Day 21 - ?

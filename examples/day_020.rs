@@ -1,7 +1,8 @@
 /*
-    100 DAYS OF CODE : Day 19
+    100 DAYS OF CODE : Day 19-20
     Bytecode Interpreter - crafting interpreters
 */
+
 use one_hundred_days_of_code::bytecode::{
     vm::{VM, InterpretResult},
 };
