@@ -34,4 +34,6 @@ The official website is [here](https://www.100daysofcode.com/) to get for furthe
 - [x] Day 18 - Following Crafting Interpreters for AST interpreter
 - [x] Day 19 - Following Crafting Interpreters for Bytecode interpreter
 - [x] Day 20 - Further development on BC interpreter
-- [ ] Day 21 - ?
+- [x] Day 21 - Started my own bytecode interpreter
+- [x] Day 22 - Continued work on the interpreter
+- [ ] Day 23 - ?
