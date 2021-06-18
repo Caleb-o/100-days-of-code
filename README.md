@@ -40,4 +40,7 @@ The official website is [here](https://www.100daysofcode.com/) to get for furthe
 - [x] Day 20 - Further development on BC interpreter
 - [x] Day 21 - Started my own bytecode interpreter
 - [x] Day 22 - Continued work on the interpreter
-- [ ] Day 23 - ?
+- [x] Day 23 - Started reading into Zig, looking through Docs
+- [x] Day 24 - Started and finished Ziglings
+- [x] Day 25 - Continue through docs and std lib docs for Zig
+- [ ] Day 26 - ?
