@@ -1,7 +1,7 @@
 # 100 Days of Code
 Participation repo for 100 Days of Code. I want to try and learn more about Rust and Zig, so this seems to fit nicely. I don't have any plans for what to do each day, some days I may just learn the Rust language and others I may attempt a small program. 
 
-*The initial intent was to use Rust, but part way through I found Zig and I am starting to get more invested into that, however, I will keep all evidence of Rust in the repo and will continue Rust where I feel the project fit.*
+*The initial intent was to use Rust, but part way through I found Zig and I am starting to get more invested into that, however, I will keep all evidence of Rust in the repo and will continue Rust where I feel the project fits.*
 
 The rules are as follows below, however, I am participating privately, where I only show my progress in a dedicated Discord channel with other members.
 
