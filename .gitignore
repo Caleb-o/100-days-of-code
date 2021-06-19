@@ -13,12 +13,13 @@ rust/Cargo.lock
 
 # Added by cargo
 
-target
+target/
 
 ### zig ###
 # Zig programming language
 
 zig/zig-cache/
+zig/src/zig-cache/
 zig/build/
 zig/build-*/
 zig/docgen_tmp/

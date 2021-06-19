@@ -59,12 +59,37 @@ test "c-like pointer"
     assert(x == 320);
 }
 
+// Pass slice as immutable
+fn printSlice(slice: []const u8) void
+{
+    print("slice: {any}\n", .{ slice });
+}
+
+// Pass slice as mutable
+fn printSliceMut(slice: []u8) void
+{
+    // Modify by reference
+    for(slice) |*val| { val.* *= 2; }
+    print("slice: {any}\n", .{ slice });
+}
+
 test "slicing"
 {
     const array = [_]u8 { 1, 2, 3, 4, 5, 6, 7, 8 };
     const slice = array[0..3];
 
     assert(slice[2] == 3);
+}
+
+test "pointer"
+{
+    var array = [_]u8 { 1, 2, 3, 4, 5, 6, 7, 8 };
+    const ptr = &array;
+
+    // Increment value in array
+    ptr[3] += 2;
+
+    assert(ptr[3] == 6);
 }
 
 pub fn main() void {
@@ -89,6 +114,10 @@ pub fn main() void {
 
     // Create a list
     const list_i32 = List(i32);
+
+    var array = [_]u8 { 1, 2, 3, 4, 5, 6, 7, 8 };
+    printSlice(array[2..5]);
+    printSliceMut(array[2..5]);
 }
 
 // Test cases
