@@ -59,6 +59,19 @@ test "c-like pointer"
     assert(x == 320);
 }
 
+// Pass value as immutable
+fn printU32(value: *const u32) void
+{
+    print("value: {}\n", .{ value.* });
+}
+
+// Pass value as mutable
+fn printU32Mut(value: *u32) void
+{
+    value.* *= 2;
+    print("value: {}\n", .{ value.* });
+}
+
 // Pass slice as immutable
 fn printSlice(slice: []const u8) void
 {
@@ -92,6 +105,27 @@ test "pointer"
     assert(ptr[3] == 6);
 }
 
+test "More pointers"
+{
+    const locked: u8 = 5;
+    var unlocked: u8 = 10;
+
+    // Both point to a constant value that cannot change
+    // P2 has the ability to change address it points to
+    // P1 is locked into the address
+    const   p1: *const u8 = &locked;
+    var     p2: *const u8 = &locked;
+
+    // Both are able to modify the value they point to
+    // P3 is locked to the address
+    const   p3: *u8 = &unlocked;
+    var     p4: *u8 = &unlocked;
+
+    // Both act exactly the same as P1 and P2
+    const   p5: *const u8 = &unlocked;
+    var     p6: *const u8 = &unlocked;
+}
+
 pub fn main() void {
     const one_bit: u1 = 1;
     const two_bit: i22 = -2;
@@ -118,6 +152,14 @@ pub fn main() void {
     var array = [_]u8 { 1, 2, 3, 4, 5, 6, 7, 8 };
     printSlice(array[2..5]);
     printSliceMut(array[2..5]);
+
+    // Can print string as slice
+    printSlice(hello);
+
+    var array_u32 = [_]u32 { 1, 2, 3, 4, 5, 6 };
+
+    printU32(&array_u32[2]);
+    printU32Mut(&array_u32[2]);
 }
 
 // Test cases
