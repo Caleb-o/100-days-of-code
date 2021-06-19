@@ -13,7 +13,7 @@ rust/Cargo.lock
 
 # Added by cargo
 
-rust/target
+target
 
 ### zig ###
 # Zig programming language
