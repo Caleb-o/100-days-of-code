@@ -43,4 +43,5 @@ The official website is [here](https://www.100daysofcode.com/) to get for furthe
 - [x] Day 23 - Started reading into Zig, looking through Docs
 - [x] Day 24 - Started and finished Ziglings
 - [x] Day 25 - Continue through docs and std lib docs for Zig
-- [ ] Day 26 - ?
+- [x] Day 26 - Written section of Zig
+- [ ] Day 27 - ?
