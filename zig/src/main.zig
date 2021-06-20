@@ -3,6 +3,8 @@ const print = std.debug.print;
 const assert = std.debug.assert;
 const expect = std.testing.expect;
 
+const queue = @import("queue.zig");
+
 // Top level declaration, order-independent
 var MAYBE_BOOL: bool = false;
 
@@ -86,6 +88,24 @@ fn printSliceMut(slice: []u8) void
     print("slice: {any}\n", .{ slice });
 }
 
+test "queue"
+{
+    const alloc = std.testing.allocator;
+
+    var int_queue = queue.Queue(i32).init(alloc);
+    
+    try int_queue.enqueue(25);
+    try int_queue.enqueue(50);
+    try int_queue.enqueue(75);
+    try int_queue.enqueue(100);
+
+    try std.testing.expectEqual(int_queue.dequeue(), 25);
+    try std.testing.expectEqual(int_queue.dequeue(), 50);
+    try std.testing.expectEqual(int_queue.dequeue(), 75);
+    try std.testing.expectEqual(int_queue.dequeue(), 100);
+    try std.testing.expectEqual(int_queue.dequeue(), null);
+}
+
 test "slicing"
 {
     const array = [_]u8 { 1, 2, 3, 4, 5, 6, 7, 8 };
@@ -130,6 +150,9 @@ pub fn main() void {
     const one_bit: u1 = 1;
     const two_bit: i22 = -2;
 
+    var hella: ?u8 = null;
+    print("Value of hella: {}\n", .{ hella });
+
     const maybe_u32 = getValue(MAYBE_BOOL);
     MAYBE_BOOL = true;
     const maybe_u32_true = getValue(MAYBE_BOOL);
@@ -139,6 +162,10 @@ pub fn main() void {
     var hello: *const [5:0]u8 = undefined;
     hello = "Hello";
     printString(hello);
+
+    // Optionals
+    var yes: ?u8 = null orelse 10;
+    print("Value of yes: {}\n", .{ yes });
 
     const hello_world = "Hello, World!";
     printString(hello_world);

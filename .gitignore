@@ -18,8 +18,7 @@ target/
 ### zig ###
 # Zig programming language
 
-zig/zig-cache/
-zig/src/zig-cache/
+zig-*/
 zig/build/
 zig/build-*/
 zig/docgen_tmp/

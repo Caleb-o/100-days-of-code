@@ -44,4 +44,5 @@ The official website is [here](https://www.100daysofcode.com/) to get for furthe
 - [x] Day 24 - Started and finished Ziglings
 - [x] Day 25 - Continue through docs and std lib docs for Zig
 - [x] Day 26 - Written section of Zig
-- [ ] Day 27 - ?
+- [x] Day 27 - Written section for pointers, optionals, error sets/unions.
+- [ ] Day 28 - ?
