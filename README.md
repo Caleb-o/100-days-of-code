@@ -24,8 +24,8 @@ The official website is [here](https://www.100daysofcode.com/) to get for furthe
 - [x] Day 4 - More over str and String
 - [x] Day 5 - Simple BrainF*ck Interpreter
 - [x] Day 6 - CLI Todo list program
-- [x] Day 7 - Chapters 3-3.2 [Written]
-- [x] Day 8 - Ownership [Written / Code]
+- [x] Day 7 - Chapters 3-3.2 [README]
+- [x] Day 8 - Ownership [README / Code]
 - [x] Day 9 - Iterators, Some, Result, Option and Closures
 - [x] Day 10-? - SDL2 Game
 - [x] Day 11 - Python image packer tool
@@ -43,6 +43,7 @@ The official website is [here](https://www.100daysofcode.com/) to get for furthe
 - [x] Day 23 - Started reading into Zig, looking through Docs
 - [x] Day 24 - Started and finished Ziglings
 - [x] Day 25 - Continue through docs and std lib docs for Zig
-- [x] Day 26 - Written section of Zig
-- [x] Day 27 - Written section for pointers, optionals, error sets/unions.
-- [ ] Day 28 - ?
+- [x] Day 26 - [README] of Zig
+- [x] Day 27 - [README] for pointers, optionals, error sets/unions.
+- [x] Day 28 - [README] Allocators
+- [ ] Day 29 - ?

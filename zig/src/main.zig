@@ -8,49 +8,40 @@ const queue = @import("queue.zig");
 // Top level declaration, order-independent
 var MAYBE_BOOL: bool = false;
 
-fn max(comptime T: type, a: T, b: T) T
-{
+fn max(comptime T: type, a: T, b: T) T {
     if (T == bool) return a or b;
     return if (a > b) a else b;
 }
 
-fn biggestFloat(a: f32, b: f32) f32
-{
+fn biggestFloat(a: f32, b: f32) f32 {
     return max(f32, a, b);
 }
 
-fn biggestInt(a: i32, b: i32) i32
-{
+fn biggestInt(a: i32, b: i32) i32 {
     return max(i32, a, b);
 }
 
-fn getValue(maybe: bool) u32
-{
+fn getValue(maybe: bool) u32 {
     return if (maybe) 0 else 1;
 }
 
 // Generic types
-fn List(comptime T: type) type
-{
-    return struct
-    {
+fn List(comptime T: type) type {
+    return struct {
         items: []T,
         len: usize,
     };
 }
 
-fn printString(string: [*:0]const u8) void
-{
-    print("str: '{s}'\n", .{ string });
+fn printString(string: [*:0]const u8) void {
+    print("str: '{s}'\n", .{string});
 }
 
-fn multiply(value: *u32) void
-{
+fn multiply(value: *u32) void {
     value.* *= 2;
 }
 
-test "c-like pointer"
-{
+test "c-like pointer" {
     var x: u32 = 128;
     var y: *u32 = &x;
 
@@ -62,38 +53,35 @@ test "c-like pointer"
 }
 
 // Pass value as immutable
-fn printU32(value: *const u32) void
-{
-    print("value: {}\n", .{ value.* });
+fn printU32(value: *const u32) void {
+    print("value: {}\n", .{value.*});
 }
 
 // Pass value as mutable
-fn printU32Mut(value: *u32) void
-{
+fn printU32Mut(value: *u32) void {
     value.* *= 2;
-    print("value: {}\n", .{ value.* });
+    print("value: {}\n", .{value.*});
 }
 
 // Pass slice as immutable
-fn printSlice(slice: []const u8) void
-{
-    print("slice: {any}\n", .{ slice });
+fn printSlice(slice: []const u8) void {
+    print("slice: {any}\n", .{slice});
 }
 
 // Pass slice as mutable
-fn printSliceMut(slice: []u8) void
-{
+fn printSliceMut(slice: []u8) void {
     // Modify by reference
-    for(slice) |*val| { val.* *= 2; }
-    print("slice: {any}\n", .{ slice });
+    for (slice) |*val| {
+        val.* *= 2;
+    }
+    print("slice: {any}\n", .{slice});
 }
 
-test "queue"
-{
+test "queue" {
     const alloc = std.testing.allocator;
 
     var int_queue = queue.Queue(i32).init(alloc);
-    
+
     try int_queue.enqueue(25);
     try int_queue.enqueue(50);
     try int_queue.enqueue(75);
@@ -106,17 +94,15 @@ test "queue"
     try std.testing.expectEqual(int_queue.dequeue(), null);
 }
 
-test "slicing"
-{
-    const array = [_]u8 { 1, 2, 3, 4, 5, 6, 7, 8 };
+test "slicing" {
+    const array = [_]u8{ 1, 2, 3, 4, 5, 6, 7, 8 };
     const slice = array[0..3];
 
     assert(slice[2] == 3);
 }
 
-test "pointer"
-{
-    var array = [_]u8 { 1, 2, 3, 4, 5, 6, 7, 8 };
+test "pointer" {
+    var array = [_]u8{ 1, 2, 3, 4, 5, 6, 7, 8 };
     const ptr = &array;
 
     // Increment value in array
@@ -125,25 +111,24 @@ test "pointer"
     assert(ptr[3] == 6);
 }
 
-test "More pointers"
-{
+test "More pointers" {
     const locked: u8 = 5;
     var unlocked: u8 = 10;
 
     // Both point to a constant value that cannot change
     // P2 has the ability to change address it points to
     // P1 is locked into the address
-    const   p1: *const u8 = &locked;
-    var     p2: *const u8 = &locked;
+    const p1: *const u8 = &locked;
+    var p2: *const u8 = &locked;
 
     // Both are able to modify the value they point to
     // P3 is locked to the address
-    const   p3: *u8 = &unlocked;
-    var     p4: *u8 = &unlocked;
+    const p3: *u8 = &unlocked;
+    var p4: *u8 = &unlocked;
 
     // Both act exactly the same as P1 and P2
-    const   p5: *const u8 = &unlocked;
-    var     p6: *const u8 = &unlocked;
+    const p5: *const u8 = &unlocked;
+    var p6: *const u8 = &unlocked;
 }
 
 pub fn main() void {
@@ -151,7 +136,7 @@ pub fn main() void {
     const two_bit: i22 = -2;
 
     var hella: ?u8 = null;
-    print("Value of hella: {}\n", .{ hella });
+    print("Value of hella: {}\n", .{hella});
 
     const maybe_u32 = getValue(MAYBE_BOOL);
     MAYBE_BOOL = true;
@@ -165,7 +150,7 @@ pub fn main() void {
 
     // Optionals
     var yes: ?u8 = null orelse 10;
-    print("Value of yes: {}\n", .{ yes });
+    print("Value of yes: {}\n", .{yes});
 
     const hello_world = "Hello, World!";
     printString(hello_world);
@@ -176,21 +161,20 @@ pub fn main() void {
     // Create a list
     const list_i32 = List(i32);
 
-    var array = [_]u8 { 1, 2, 3, 4, 5, 6, 7, 8 };
+    var array = [_]u8{ 1, 2, 3, 4, 5, 6, 7, 8 };
     printSlice(array[2..5]);
     printSliceMut(array[2..5]);
 
     // Can print string as slice
     printSlice(hello);
 
-    var array_u32 = [_]u32 { 1, 2, 3, 4, 5, 6 };
+    var array_u32 = [_]u32{ 1, 2, 3, 4, 5, 6 };
 
     printU32(&array_u32[2]);
     printU32Mut(&array_u32[2]);
 }
 
 // Test cases
-test "Try to compare bools"
-{
+test "Try to compare bools" {
     try expect(max(bool, false, true) == true);
 }
