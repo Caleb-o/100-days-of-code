@@ -46,4 +46,9 @@ The official website is [here](https://www.100daysofcode.com/) to get for furthe
 - [x] Day 26 - [README] of Zig
 - [x] Day 27 - [README] for pointers, optionals, error sets/unions.
 - [x] Day 28 - [README] Allocators
-- [ ] Day 29 - ?
+- [x] Day 29 - Messing with calling C from Zig. Attempted a BF interpreter
+- [x] Day 30 - Checked out Zig's translate-c. Finished BF interpreter
+- [x] Day 31 - Made auto-clicked for Club Penguin Rewritten in Python. Started Crafting Interpreters with Zig
+- [x] Day 32 - Continued Crafting Interpreters chapters
+- [x] Day 33 - Improved visuals for clicker
+- [ ] Day 34 - 
