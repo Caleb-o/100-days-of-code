@@ -14,8 +14,10 @@ The official website is [here](https://www.100daysofcode.com/) to get for furthe
 
 ## Milestones
 *Note: Milestones are based on rough estimates, some may be completed earlier or later depending on how days progress.*
-- Day 10-? : SDL2 Game
-- Day 25 : (small) SDL2 game of my own
+- SDL2 Game
+
+## Written Sections
+[Day 7](./day_007.md) | [Day 8](./day_008.md) | [Day 26](./day_026.md) | [Day 27](./day_027.md) | [Day 28](./day_028.md)
 
 ## Progress
 - [x] Day 1 - Simple multithreaded web server (From the Rust book)
