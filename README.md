@@ -51,4 +51,6 @@ The official website is [here](https://www.100daysofcode.com/) to get for furthe
 - [x] Day 31 - Made auto-clicked for Club Penguin Rewritten in Python. Started Crafting Interpreters with Zig
 - [x] Day 32 - Continued Crafting Interpreters chapters
 - [x] Day 33 - Improved visuals for clicker
-- [ ] Day 34 - 
+- [x] Day 34 - More VM work
+- [x] Day 35 - VM work: strings, globals
+- [ ] Day 36 - ?
