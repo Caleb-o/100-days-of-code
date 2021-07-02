@@ -53,4 +53,7 @@ The official website is [here](https://www.100daysofcode.com/) to get for furthe
 - [x] Day 33 - Improved visuals for clicker
 - [x] Day 34 - More VM work
 - [x] Day 35 - VM work: strings, globals
-- [ ] Day 36 - ?
+- [x] Day 36 - Continuned on VM, putting project on pause.
+- [x] Day 37 - Attempted C/C++ linking with Zig and failed :p
+- [x] Day 38 - Linked Zig with CSFML and have window launching
+- [ ] Day 39 - ?
